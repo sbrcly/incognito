@@ -189,19 +189,153 @@ const menuItems = [
             },
             {
                 service: 'Rim & Caliper Wraps',
-                href: ''
+                cars: [
+                    {
+                        name: 'Tesla Model S',
+                        wrapType: 'Blue Raspberry Calipers',
+                        description: `We are always striving to do something different and out of the ordinary.  Since we have done countless Teslas, this is a model that we generally push a little harder with.  We wrapped the Calipers, Front and Rear T Emblems and center caps in Gloss Blue Raspberry and did a full Chrome Delete in Satin Black with some hints of the Raw Carbon Fiber.`,
+                        images: [
+                            '/assets/cars/tesla-model-s/image1.PNG',
+                            '/assets/cars/tesla-model-s/image2.PNG', 
+                            '/assets/cars/tesla-model-s/image3.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Tesla Model X',
+                        wrapType: 'Carbon Fiber Rims',
+                        description: `We are in the business of making cars stand out in a crowd.  Most Tesla owners are quite found of the Chrome Delete, but there are now so many blacked out Teslas, that something else must be done.  On this Model X, we used Vvivid's Carbon Fiber which has a very deep and almost lenticular effect which makes the weave looks like the deepest portion is moving slower than the upper most.  It's something that can't really be captured in still shots.  Another popular way to stand out amongst the sea of Teslas, is add a pop color.  In this case, the Orange was added to the Rim Ring, Calipers, T emblems and center caps.`,
+                        images: [
+                            '/assets/cars/tesla-model-x-r&c/image1.PNG',
+                            '/assets/cars/tesla-model-x-r&c/image2.PNG', 
+                            '/assets/cars/tesla-model-x-r&c/image3.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'FRS',
+                        wrapType: 'Vengeance Red',
+                        description: `It’s always important to look at the whole package.  Take in the subtle lines on the vehicle and add the accents where they will seem to be natural.  Read the mood of each vehicle and suggest which colors will play on the aggressiveness that comes off the blank canvas in front of you.  We used KPMF Vengeance Red and Avery’s Satin Basalt to give this FRS just the right amount of contrast.`,
+                        images: [
+                            '/assets/cars/frs/image1.PNG',
+                            '/assets/cars/frs/image2.PNG', 
+                            '/assets/cars/frs/image3.PNG', 
+                        ]
+                    }
+                ]
             },
             {
                 service: 'Chrome Delete',
-                href: ''
+                cars: [
+                    {
+                        name: 'Tesla Model X',
+                        wrapType: 'Carbon Chrome Delete with Yellow Accents',
+                        description: `This Model X got the works without getting a color change wrap.  We offer so many services that we can still completely change the whole look of a vehicle while still keeping the factory paint visible.  We wrapped all the lower textured plastics in a carbon fiber and did the chrome delete in a combination of yellow, satin black and carbon.  We also tinted the lights and wrapped the rims and calipers.`,
+                        images: [
+                            '/assets/cars/tesla-model-x-chrome/image1.PNG',
+                            '/assets/cars/tesla-model-x-chrome/image2.PNG', 
+                            '/assets/cars/tesla-model-x-chrome/image3.PNG', 
+                            '/assets/cars/tesla-model-x-chrome/image4.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Tesla Model S',
+                        wrapType: 'Black Brushed with Bronze Chrome Delete',
+                        description: `We love stepping outside the norms and crafting a customer’s unique vision.  We have done countless chrome deletes and even more wraps on Tesla’s line of cars, but the chrome deletes usually stick to a variation of black.  Flipping this and doing the car in Black Brushed with the accents in a Gloss Bronze Metallic is so striking.  We also added the same treatment to the rims to complete the package.`,
+                        images: [
+                            '/assets/cars/tesla-model-s-chrome/image1.PNG',
+                            '/assets/cars/tesla-model-s-chrome/image2.PNG', 
+                            '/assets/cars/tesla-model-s-chrome/image3.PNG', 
+                            '/assets/cars/tesla-model-s-chrome/image4.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Jeep Grand Cherokee SRT',
+                        wrapType: 'Gloss Black Chrome Delete',
+                        description: `The chrome delete is always an aggressive accent.  Chrome trim tends to make some vehicles look more luxury than they should.  This SRT Jeep needed to have it blacked out.  The transformation it underwent with just small amounts of vinyl is very impressive.`,
+                        images: [
+                            '/assets/cars/jeep-grand-cherokee-srt/image1.PNG',
+                            '/assets/cars/jeep-grand-cherokee-srt/image2.PNG', 
+                            '/assets/cars/jeep-grand-cherokee-srt/image3.PNG', 
+                            '/assets/cars/jeep-grand-cherokee-srt/image4.PNG', 
+                        ]
+                    }
+                ]
             },
             {
                 service: 'Interior Wraps',
-                href: ''
+                cars: [
+                    {
+                        name: 'Ford Mustang Convertible',
+                        wrapType: 'Gold Rush Purple',
+                        description: `This car was all about the details.  We created a custom color for this customer and then added accents of KPMF Matte Iced Amethyst to give this Mustang a well rounded look.  We wrapped the rims, exterior and interior on this one. `,
+                        images: [
+                            '/assets/cars/ford-mustang-convertible/image1.PNG',
+                            '/assets/cars/ford-mustang-convertible/image2.PNG', 
+                            '/assets/cars/ford-mustang-convertible/image3.PNG', 
+                            '/assets/cars/ford-mustang-convertible/image4.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Tesla Model S',
+                        wrapType: 'Custom Mint',
+                        description: `We sat down with this customer and created a custom variation on Orafol’s Matte Mint by adding a gloss gold flake to the top.  We didn’t stop there however, we then wrapped the rims, calipers, interior, full exterior and chrome delete.  We even tinted the windows with our Dub IR film and coated the front end with Xpel Paint Protection Film for added protection on their long drives.`,
+                        images: [
+                            '/assets/cars/tesla-model-s-interior/image1.PNG',
+                            '/assets/cars/tesla-model-s-interior/image2.PNG', 
+                            '/assets/cars/tesla-model-s-interior/image3.PNG', 
+                            '/assets/cars/tesla-model-s-interior/image4.PNG', 
+                            '/assets/cars/tesla-model-s-interior/image5.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Mercedes SL 500',
+                        wrapType: 'Custome Wood Grain',
+                        description: `When doing a custom interior wrap, the options are pretty endless.  Granted, there are popular choices.  This wood grain was slightly warmer in tone than the actual wood grain that Mercedes offers, but in our opinion, it accentuates the leather and surrounding interior so much better.`,
+                        images: [
+                            '/assets/cars/mercedes-sl-500/image1.PNG',
+                            '/assets/cars/mercedes-sl-500/image2.PNG', 
+                            '/assets/cars/mercedes-sl-500/image3.PNG', 
+                            '/assets/cars/mercedes-sl-500/image4.PNG', 
+                            '/assets/cars/mercedes-sl-500/image5.PNG', 
+                        ]
+                    }
+                ]
             },
             {
                 service: 'Commercial',
-                href: ''
+                cars: [
+                    {
+                        name: 'Freightliner FL60',
+                        wrapType: 'Satin Black with Jambs for Merrick Horses',
+                        description: `When the truck runs amazingly and the interior is holding up beautifully, it’s time to make the outside just as gorgeous.  Satin Black is a very popular color here in Las Vegas for Vehicle Wraps.  We took this white late Nineties Freightliner and wrapped all the exterior in this amazingly smooth vinyl, wrapped the door jambs and added rock chip protection to the nose and front bumper to keep it looking great for a good long time.`,
+                        images: [
+                            '/assets/cars/freightliner-fl60/image1.PNG',
+                            '/assets/cars/freightliner-fl60/image2.PNG', 
+                            '/assets/cars/freightliner-fl60/image3.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'F1 Car',
+                        wrapType: 'Dream Racing',
+                        description: null,
+                        images: [
+                            '/assets/cars/f1-car/image1.PNG',
+                            '/assets/cars/f1-car/image2.PNG', 
+                            '/assets/cars/f1-car/image3.PNG', 
+                            '/assets/cars/f1-car/image4.PNG', 
+                        ]
+                    },
+                    {
+                        name: 'Toyota 4 Runner',
+                        wrapType: 'Banks St Guns',
+                        description: `The design of this wrap was done by another artist, but Incognito Wraps stepped up to complete the vision.  The end result is a very mean looking truck.  The attention to detail is what makes this wrap different than the rest of the commercial vehicles you will see around town.  We removed all the parts, including the fender flares, handles, mirrors, front bumper, badges, roof rack and spoiler.  We did this to wrap them independently and give the cleanest finish possible.`,
+                        images: [
+                            '/assets/cars/toyota-4-runner/image1.PNG',
+                            '/assets/cars/toyota-4-runner/image2.PNG', 
+                            '/assets/cars/toyota-4-runner/image3.PNG', 
+                            '/assets/cars/toyota-4-runner/image4.PNG', 
+                        ]
+                    }
+                ]
             },
             {
                 service: 'Clear Film',

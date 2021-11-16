@@ -81,6 +81,8 @@ class Services {
                 this.addServiceDetails(type, typeContainer);
                 appendTo.append(typeContainer);
             }
+        }   else {
+            this.addCars();
         }
     }
     addServiceDetails = (type, appendTo) => {
@@ -102,6 +104,9 @@ class Services {
             };
             appendTo.append(newCar);
         }
+    }
+    addCars = () => {
+        
     }
 };
 
