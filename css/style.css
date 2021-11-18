@@ -194,6 +194,13 @@ h4 {
 	display: none;
 }
 
+.service-container.show-cars .car {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all 0.5s;
+}
+
 .type-container.show-links .car.show-cars {
 	display: flex;
 	flex-direction: column;

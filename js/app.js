@@ -65,24 +65,24 @@ class Services {
             serviceTitle.classList.add(service.service.replaceAll(' ', ''));
             serviceTitle.innerHTML = `<span>${service.service}</span> <i class="fas fa-chevron-down"></i>`;
             newService.append(serviceTitle);
-            this.addServiceSubCat(service, newService);
+            if (service.types) {
+                this.addServiceSubCat(service, newService);
+            }   else if (service.cars) {
+                this.addCars(service, newService);
+            }
             this.appendTo.append(newService);
         }
     }
     addServiceSubCat = (service, appendTo) => {
-        if (service.types) {
-            for (let type of service.types) {
-                const typeContainer = document.createElement('div');
-                typeContainer.classList.add('type-container');
-                typeContainer.classList.add(type.name.toLowerCase());
-                const newType = document.createElement('h4');
-                newType.innerHTML = `<span>${type.name}</span> <i class="fas fa-chevron-down"></i>`;
-                typeContainer.append(newType);
-                this.addServiceDetails(type, typeContainer);
-                appendTo.append(typeContainer);
-            }
-        }   else {
-            this.addCars();
+        for (let type of service.types) {
+            const typeContainer = document.createElement('div');
+            typeContainer.classList.add('type-container');
+            typeContainer.classList.add(type.name.toLowerCase());
+            const newType = document.createElement('h4');
+            newType.innerHTML = `<span>${type.name}</span> <i class="fas fa-chevron-down"></i>`;
+            typeContainer.append(newType);
+            this.addServiceDetails(type, typeContainer);
+            appendTo.append(typeContainer);
         }
     }
     addServiceDetails = (type, appendTo) => {
@@ -105,8 +105,24 @@ class Services {
             appendTo.append(newCar);
         }
     }
-    addCars = () => {
-        
+    addCars = (service, appendTo) => {
+        for (let car of service.cars) {
+            const newCar = document.createElement('div');
+            newCar.classList.add('car');
+            const carName = document.createElement('h5');
+            carName.innerText = car.name;
+            const carWrap = document.createElement('h6');
+            carWrap.innerText = car.wrapType;
+            const carDescription = document.createElement('p');
+            carDescription.innerText = 'car.description';
+            newCar.append(carName, carWrap, carDescription);
+            for (let image of car.images) {
+                const carImage = document.createElement('img');
+                carImage.setAttribute('src', image);
+                newCar.append(carImage);
+            };
+            appendTo.append(newCar);
+        }
     }
 };
 
@@ -124,11 +140,14 @@ const colorChangeTypes = document.querySelectorAll('.type-container h4');
 const allCars = document.querySelectorAll('.car');
 
 for (let link of serviceLinks) {
+    // console.log(link);
     link.addEventListener('click', () => {
         if (link.classList.contains('ColorChangeWraps')) {
             for (let lnk of colorChangeLinks) {
                 lnk.classList.toggle('show-links');
             }
+        }   else {
+            link.parentElement.classList.toggle('show-cars');
         }
     })
 };
