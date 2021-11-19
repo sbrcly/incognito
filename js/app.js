@@ -70,6 +70,8 @@ class Services {
                 this.addServiceSubCat(service, newService);
             }   else if (service.cars) {
                 this.addCars(service, newService);
+            }   else {
+                this.addContent(service, newService);
             }
             this.appendTo.append(newService);
         }
@@ -105,14 +107,41 @@ class Services {
     }
     addCarImages = (items, listenTo, appendTo) => {
         listenTo.addEventListener('click', () => {
-            for (let i = 0; i < appendTo.length; i++) {
-                for (let image of items.cars[i].images) {
-                    const carImage = document.createElement('img');
-                    carImage.setAttribute('src', image);
-                    appendTo[i].append(carImage);
-                }
+            if (appendTo[0].childNodes.length <= 3) {
+                for (let i = 0; i < appendTo.length; i++) {
+                    for (let image of items.cars[i].images) {
+                        const carImage = document.createElement('img');
+                        carImage.setAttribute('src', image);
+                        appendTo[i].append(carImage);
+                    }
+                };
+            };
+        });
+    };
+    addContent = (item, appendTo) => {
+        const serviceContent = document.createElement('div');
+        serviceContent.classList.add('service-content');
+        const headerImg = document.createElement('img');
+        headerImg.classList.add('service-header-img');
+        headerImg.setAttribute('src', item.mainImg);
+        const serviceDescription = document.createElement('h4');
+        serviceDescription.classList.add('service-description');
+        serviceDescription.innerText = item.description;
+        serviceContent.append(headerImg, serviceDescription);
+        if (item.images) {
+            for (let image of item.images) {
+                const newImage = document.createElement('img');
+                newImage.classList.add('service-image');
+                newImage.setAttribute('src', image);
+                serviceContent.append(newImage);
             }
-        })
+        }   else {
+            const newImage = document.createElement('img');
+            newImage.classList.add('sercive-image');
+            newImage.setAttribute('src', item.footerImg);
+            serviceContent.append(newImage);
+        }
+        appendTo.append(serviceContent);
     }
 };
 
@@ -136,7 +165,7 @@ for (let link of serviceLinks) {
                 lnk.classList.toggle('show-links');
             }
         }   else {
-            link.parentElement.classList.toggle('show-cars');
+            link.parentElement.classList.toggle('show-content');
         }
     })
 };
@@ -146,7 +175,7 @@ for (let type of colorChangeTypes) {
         const currentType = type.innerText.toLowerCase();
         for (let car of allCars) {
             if (car.parentElement.classList.contains(currentType)) {
-                car.classList.toggle('show-cars');
+                car.classList.toggle('show-content');
             }
         }
     });

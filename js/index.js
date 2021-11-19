@@ -337,16 +337,72 @@ const menuItems = [
                 ]
             },
             {
-                service: 'Clear Film',
-                href: ''
+                service: 'Motorcycles',
+                cars: [
+                    {
+                        name: 'Kawasaki Ninja',
+                        wrapType: 'Green Lantern vs. Sinestro',
+                        description: `We love creating custom designs for our customers.  This one was especially fun because one of our designers is a bit of a comic book nerd.  The limitless possibilities that our in house printing services grant is amazing.`,
+                        images: [
+                            '/assets/cars/kawasaki-ninja/image1.jpg',
+                            '/assets/cars/kawasaki-ninja/image2.jpg', 
+                            '/assets/cars/kawasaki-ninja/image3.jpg', 
+                            '/assets/cars/kawasaki-ninja/image4.jpg', 
+                        ]
+                    },
+                    {
+                        name: 'Ducati Streetfighter',
+                        wrapType: 'Matte Nato Olive',
+                        description: `This bike was an homage to another Streetfighter design from Ducati.  We put our tweaks and touches on it as we always do, but kept true to the branding that was set forth.  We also wanted to keep enough of the real carbon coming through as much as we could.  In the end, Orafol's Matte Nato Olive paired with Avery's Brushed Aluminum turned out to be an outstanding color combination for this bike.`,
+                        images: [
+                            '/assets/cars/ducati-streetfighter/image1.jpg',
+                            '/assets/cars/ducati-streetfighter/image2.jpg', 
+                            '/assets/cars/ducati-streetfighter/image3.jpg', 
+                            '/assets/cars/ducati-streetfighter/image4.jpg', 
+                        ]
+                    },
+                    {
+                        name: 'Yamaha R6',
+                        wrapType: 'Race Graphics',
+                        description: `We often are approached by customers to create replicas of their favorite race schemes.  We took this one on and were very pleased with the result even though race body work can be ill fitting and a bit more rough than factory fairings.`,
+                        images: [
+                            '/assets/cars/yamaha-r6/image1.jpg',
+                            '/assets/cars/yamaha-r6/image2.jpg', 
+                            '/assets/cars/yamaha-r6/image3.jpg', 
+                            '/assets/cars/yamaha-r6/image4.jpg', 
+                        ]
+                    },
+                ]
             },
             {
-                service: 'Motorcycles',
-                href: ''
+                service: 'Clear Film',
+                description: `Wraps aren't just about cosmetic or aesthetic changes, they can also protect an already adored paint job. Clear Protect Films have been around for a while, but if they are done correctly, you would barely know they are there.  By applying the thick PPF (Paint Protection Film) to your car, you are prolonging the paint's life by protecting it from the rocks and road debris that threaten to mar it's luxurious surface.  PPF can be applied to as small an area as the front bumper to as large an area as the entire car.  The most popular packages are what we call the Full Front Clip and the Half Clip.  The half clip covers your Front Bumper, the Front Portion of the hood, and Front Portion of the Fenders.  The Full Front Clip typically covers the Full Front Bumper, Full Hood, Full Front Fenders and Mirrors.  The appeal of the Full Front Clip is there are very few lines visible and less lines to collect dirt or catch your rag while washing.  
+
+                We also offer two different types of film, XPEL Ultimate and Nano-Fusion.  We are Vegas' exclusive installer of Nano-Fusion which has been proven to be the best performing PPF product on the market today.  It has been field tested in some of the most challenging environments on earth, including the desert of Saudi Arabia.  Nano-Fusion is the ONLY PPF that is resistant to stains from insects, chemicals, and acid rain.  Nano-Fusion also carries a limited lifetime warranty against cracking, peeling or yellowing making it perfect for that car that will be yours forever.  Feel free to give us a call for more information.
+                
+                Pricing can vary from car to car, so come in today to set up an appointment.`,
+                mainImg: '/assets/clear-film/header.jpeg',
+                images: [
+                    '/assets/clear-film/images/image1.jpg',
+                    '/assets/clear-film/images/image2.jfif',
+                    '/assets/clear-film/images/image3.jfif',
+                    '/assets/clear-film/images/image4.jpg',
+                ]
             },
             {
                 service: 'Window Tint',
-                href: ''
+                description: `Automotive Window Tinting has advanced dramatically over the years and many people weren't even aware of it.  Ceramic Window Tints have raised the bar by offering drivers dramatically reduced heat entering the cabin.  There are many different manufacturers of window tint and they all have different levels of IR rejection.  We searched far and wide to find the best film to offer our customers and we have found it in DUB IR.  It has the highest heat rejection that we have seen on the market even at the lightest shade.  Here is a quote from their website;
+
+                "DUB iR Luxury Window Tint is light years ahead of historic vehicle window film and should be at the front of your mind when you’re looking to upgrade the performance of your vehicle. Unlike traditional window tint that needs to be darker to achieve any performance, with DUB iR and it’s superior infrared blocking technology installed, you achieve an extraordinary degree of heat rejection, even from the lightest of shades (DUB iR 70% has a Total Solar Energy Rejection of 46%). DUB iR is non-reflective and won’t interfere with any electronics as its construction is nano-ceramic, not metal. The look is a true black hue, making it appear factory installed. Shades available include 5% (limo), 20%, 35%, 50% and 70%.
+                
+                
+                Another important note about the DUB iR window film is that it creates a protective barrier from the sun’s damaging UV rays for both your skin and the cabin of the vehicle. Studies show the incidence of skin cancer among passengers corresponds directly with the side of their body exposed to the window. For example, a driver in North America tends to have a higher rate of skin cancer on their left side, the one exposed to the sun while driving. DUB iR window film is recommended by The Skin Cancer Foundation as an effective protection from the sun."
+                
+                 
+                
+                Give us a call today to book your vehicle for DUB IR Premium Luxury Window Tint.`,
+                mainImg: '/assets/window-tint/header.jpeg',
+                footerImg: '/assets/window-tint/footer.jpeg'
             }
         ],
         important: false
@@ -390,6 +446,6 @@ const menuItems = [
 
 const wrapOfTheMonth = {
     name: 'McLaren 650S',
-    img: '/assets/wrap-of-the-month.PNG',
+    img: '/assets/wrap-of-the-month.avif',
     wrapType: 'Winter Camo'
 };
