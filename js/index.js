@@ -295,7 +295,6 @@ const menuItems = [
                             '/assets/cars/mercedes-sl-500/image2.PNG', 
                             '/assets/cars/mercedes-sl-500/image3.PNG', 
                             '/assets/cars/mercedes-sl-500/image4.PNG', 
-                            '/assets/cars/mercedes-sl-500/image5.PNG', 
                         ]
                     }
                 ]

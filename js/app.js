@@ -55,6 +55,7 @@ class Services {
         this.appendTo = appendTo;
         
         this.applyService();
+
     }
     applyService = () => {
         const {subLinks} = this.services;
@@ -81,13 +82,13 @@ class Services {
             const newType = document.createElement('h4');
             newType.innerHTML = `<span>${type.name}</span> <i class="fas fa-chevron-down"></i>`;
             typeContainer.append(newType);
-            this.addServiceDetails(type, typeContainer);
+            this.addCars(type, typeContainer);
             appendTo.append(typeContainer);
         }
     }
-    addServiceDetails = (type, appendTo) => {
-        const {cars} = type;
-        for (let car of cars) {
+    addCars = (items, appendTo) => {
+        let cars = [];
+        for (let car of items.cars) {
             const newCar = document.createElement('div');
             newCar.classList.add('car');
             const carName = document.createElement('h5');
@@ -97,32 +98,21 @@ class Services {
             const carDescription = document.createElement('p');
             carDescription.innerText = 'car.description';
             newCar.append(carName, carWrap, carDescription);
-            for (let image of car.images) {
-                const carImage = document.createElement('img');
-                carImage.setAttribute('src', image);
-                newCar.append(carImage);
-            };
             appendTo.append(newCar);
+            cars.push(newCar);
         }
+        this.addCarImages(items, appendTo, cars);
     }
-    addCars = (service, appendTo) => {
-        for (let car of service.cars) {
-            const newCar = document.createElement('div');
-            newCar.classList.add('car');
-            const carName = document.createElement('h5');
-            carName.innerText = car.name;
-            const carWrap = document.createElement('h6');
-            carWrap.innerText = car.wrapType;
-            const carDescription = document.createElement('p');
-            carDescription.innerText = 'car.description';
-            newCar.append(carName, carWrap, carDescription);
-            for (let image of car.images) {
-                const carImage = document.createElement('img');
-                carImage.setAttribute('src', image);
-                newCar.append(carImage);
-            };
-            appendTo.append(newCar);
-        }
+    addCarImages = (items, listenTo, appendTo) => {
+        listenTo.addEventListener('click', () => {
+            for (let i = 0; i < appendTo.length; i++) {
+                for (let image of items.cars[i].images) {
+                    const carImage = document.createElement('img');
+                    carImage.setAttribute('src', image);
+                    appendTo[i].append(carImage);
+                }
+            }
+        })
     }
 };
 
@@ -140,7 +130,6 @@ const colorChangeTypes = document.querySelectorAll('.type-container h4');
 const allCars = document.querySelectorAll('.car');
 
 for (let link of serviceLinks) {
-    // console.log(link);
     link.addEventListener('click', () => {
         if (link.classList.contains('ColorChangeWraps')) {
             for (let lnk of colorChangeLinks) {

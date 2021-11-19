@@ -177,7 +177,7 @@ h3 {
 
 h4 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	border-bottom: 1px solid #ccc;
 	padding: 1rem 30vw;
 }
